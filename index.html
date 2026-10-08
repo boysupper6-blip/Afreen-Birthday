@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8dce9">
+  <title>For Afreen ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div id="particles" aria-hidden="true"></div>
+
+  <main>
+    <section class="screen hero active" id="home">
+      <div class="eyebrow">A tiny birthday universe ✦</div>
+      <div class="sparkle">✦</div>
+      <h1>Hey, Afreen.<br><span>This one's for you.</span></h1>
+      <p class="intro">Someone has spent a suspicious amount of time making you a birthday surprise.</p>
+      <button class="primary" id="startBtn">Okay, show me ♡</button>
+      <div class="tiny-note">No boring birthday card. Promise.</div>
+    </section>
+
+    <section class="screen" id="story">
+      <div class="section-label">01 · SISTER MODE</div>
+      <h2>Before we get emotional…</h2>
+      <p class="lead">There are a few things that simply had to be documented.</p>
+      <div class="fun-grid">
+        <article class="fun-card tilt">
+          <span>🎀</span>
+          <h3>Professional Drama</h3>
+          <p>Somehow every tiny situation becomes a full-length episode. Respect the commitment.</p>
+        </article>
+        <article class="fun-card tilt">
+          <span>👑</span>
+          <h3>CEO of Being Right</h3>
+          <p>Evidence may say otherwise. But somehow… you're still right. Impressive.</p>
+        </article>
+        <article class="fun-card tilt">
+          <span>😂</span>
+          <h3>Certified Menace</h3>
+          <p>Annoying? Occasionally. Loved? Unfortunately for you, absolutely.</p>
+        </article>
+      </div>
+      <button class="next-btn" data-next="heart">Okay, enough roasting →</button>
+    </section>
+
+    <section class="screen" id="heart">
+      <div class="section-label">02 · THE REAL PART</div>
+      <div class="letter-card">
+        <div class="letter-top">For my sister, Afreen ♡</div>
+        <h2>Some things don't need a big speech.</h2>
+        <p>Life gets busy, people grow up, and everyone gets caught up in their own little worlds. But some people stay important no matter how much everything changes.</p>
+        <p>You're one of those people.</p>
+        <p>I may not say it every day, and I may show it in the weirdest ways, but I'm genuinely grateful to have you as my sister.</p>
+        <p>So today, I hope you get more reasons to smile, more moments that feel peaceful, and all the good things you're quietly wishing for.</p>
+        <div class="signature">— Your brother ♡</div>
+      </div>
+      <button class="next-btn" data-next="wish">There's one more thing… ✨</button>
+    </section>
+
+    <section class="screen wish-screen" id="wish">
+      <div class="section-label">03 · MAKE A WISH</div>
+      <h2>Close your eyes.<br>Make one wish.</h2>
+      <p class="lead">Then tap the cake and make it official. 🎂</p>
+      <div class="cake-wrap" id="cake" role="button" tabindex="0" aria-label="Birthday cake">
+        <div class="flame" id="flame">✦</div>
+        <div class="candle"></div>
+        <div class="cake-top"></div>
+        <div class="cake-body"><span></span><span></span><span></span></div>
+        <div class="plate"></div>
+      </div>
+      <p class="tap-hint" id="cakeHint">tap the cake ♡</p>
+    </section>
+
+    <section class="screen finale" id="finale">
+      <div class="final-hearts">♡　✦　♡</div>
+      <div class="section-label">THE LAST PAGE</div>
+      <h2>Happy Birthday,<br><span>Afreen.</span></h2>
+      <p class="final-message">May this year be softer on you, kinder to you, and full of little moments that make you think, “Yeah… life is actually pretty nice.”</p>
+      <div class="wish-box">
+        <span>🎂</span>
+        <strong>Stay happy. Stay weird.</strong>
+        <small>And don't change the parts that make you, you.</small>
+      </div>
+      <p class="love-line">Made with love, a little teasing, and probably too much CSS. ♡</p>
+      <button class="replay" id="replayBtn">↻ Experience it again</button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Birthday magic unlocked ✨</div>
+  <script src="script.js"></script>
+</body>
+</html>
