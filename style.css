@@ -1,0 +1,64 @@
+:root{
+  --ink:#33283a;--muted:#786c7d;--rose:#d96b98;--rose-dark:#bd4f7d;
+  --lav:#9d86c8;--cream:#fff9fc;--glass:rgba(255,255,255,.62);
+  --shadow:0 24px 70px rgba(93,61,91,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:"DM Sans",sans-serif;background:linear-gradient(135deg,#fff9fc 0%,#f7effb 45%,#fff5f0 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.32;background-image:radial-gradient(#c993b3 1px,transparent 1px);background-size:34px 34px}
+.ambient{position:fixed;border-radius:50%;filter:blur(10px);pointer-events:none;opacity:.48}
+.ambient-one{width:42vw;height:42vw;top:-15vw;left:-12vw;background:#f7c5d9}
+.ambient-two{width:38vw;height:38vw;right:-12vw;bottom:-12vw;background:#d8c9f3}
+#particles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.particle{position:absolute;animation:float linear forwards;opacity:0;color:#d77da3;font-size:15px}
+@keyframes float{0%{transform:translateY(15vh) rotate(0);opacity:0}12%{opacity:.7}100%{transform:translateY(-110vh) rotate(260deg);opacity:0}}
+main{position:relative;z-index:3}
+.screen{min-height:100vh;display:none;align-items:center;justify-content:center;flex-direction:column;padding:70px 22px;text-align:center;animation:pageIn .7s ease both}
+.screen.active{display:flex}
+@keyframes pageIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero{padding-top:40px}
+.eyebrow,.section-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-dark);font-weight:700}
+.sparkle{font-size:26px;color:#c37ca2;margin:22px 0 6px;animation:pulse 2.2s infinite}
+@keyframes pulse{50%{transform:scale(1.18) rotate(8deg)}}
+h1,h2{font-family:"Playfair Display",serif;font-weight:600;line-height:1.03;margin:12px 0 18px}
+h1{font-size:clamp(52px,10vw,100px);letter-spacing:-.045em}
+h1 span,h2 span{color:var(--rose)}
+h2{font-size:clamp(39px,7vw,68px);letter-spacing:-.035em}
+.intro,.lead{max-width:570px;color:var(--muted);font-size:17px;line-height:1.75;margin:0 auto 28px}
+.tiny-note{font-size:12px;color:#a69aa7;margin-top:18px}
+.primary,.next-btn,.replay{border:0;cursor:pointer;font:600 14px "DM Sans";transition:.25s ease}
+.primary{padding:16px 25px;border-radius:999px;background:var(--ink);color:#fff;box-shadow:0 12px 30px rgba(51,40,58,.2)}
+.primary:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(51,40,58,.25)}
+.fun-grid{width:min(900px,100%);display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:25px 0 28px}
+.fun-card,.letter-card,.wish-box{background:var(--glass);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow);backdrop-filter:blur(14px)}
+.fun-card{padding:30px 23px;border-radius:25px;text-align:left;transition:transform .25s ease}
+.fun-card:hover{transform:translateY(-7px) rotate(-1deg)}
+.fun-card span{font-size:30px}.fun-card h3{margin:16px 0 8px;font-family:"Playfair Display",serif;font-size:23px}.fun-card p{color:var(--muted);line-height:1.65;font-size:14px;margin:0}
+.next-btn{padding:13px 19px;border-radius:999px;background:rgba(255,255,255,.72);color:var(--rose-dark);border:1px solid rgba(217,107,152,.22)}
+.next-btn:hover{background:#fff;transform:translateY(-2px)}
+.letter-card{width:min(680px,100%);padding:42px 44px;border-radius:30px;text-align:left;position:relative;margin:24px 0 25px}
+.letter-card:after{content:"";position:absolute;width:70px;height:70px;right:22px;top:20px;border:1px solid rgba(217,107,152,.18);border-radius:50%}
+.letter-top{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-dark);font-weight:700;margin-bottom:24px}
+.letter-card h2{font-size:38px}.letter-card p{color:#655968;line-height:1.8;font-size:15px}.signature{margin-top:25px;color:var(--rose-dark);font-family:"Playfair Display",serif;font-size:20px}
+.cake-wrap{width:220px;height:220px;position:relative;cursor:pointer;margin:20px auto 4px;transition:transform .25s}.cake-wrap:hover{transform:translateY(-5px)}
+.plate{position:absolute;width:190px;height:22px;border-radius:50%;background:#eadce9;bottom:20px;left:15px;box-shadow:0 8px 14px rgba(72,48,70,.12)}
+.cake-body{position:absolute;width:150px;height:72px;left:35px;bottom:42px;border-radius:12px 12px 20px 20px;background:linear-gradient(#f5bdd1 0 23%,#fff 23% 34%,#eaa0bd 34% 100%);box-shadow:inset 0 -8px rgba(184,74,117,.08)}
+.cake-top{position:absolute;width:150px;height:48px;left:35px;bottom:95px;border-radius:50%;background:#fff2f7;border:3px solid #eaa0bd}
+.cake-body span{position:absolute;width:12px;height:19px;border-radius:50%;background:#fff;top:19px}.cake-body span:nth-child(1){left:29px}.cake-body span:nth-child(2){left:69px}.cake-body span:nth-child(3){right:27px}
+.candle{position:absolute;width:9px;height:48px;left:105px;bottom:138px;background:#9d86c8;border-radius:4px}
+.flame{position:absolute;z-index:4;left:98px;bottom:185px;color:#f2a65a;font-size:22px;animation:flicker .55s infinite alternate}
+@keyframes flicker{to{transform:scale(1.18) rotate(5deg);opacity:.72}}
+.cake-wrap.blown .flame{animation:none;opacity:0;transform:scale(.2) translateY(8px);transition:.35s}
+.tap-hint{font-size:12px;color:#a394a6}
+.finale{background:radial-gradient(circle at 50% 45%,rgba(255,222,235,.72),transparent 45%)}
+.final-hearts{color:#c96d97;font-size:25px;letter-spacing:10px;margin-bottom:20px;animation:drift 3s ease-in-out infinite}
+@keyframes drift{50%{transform:translateY(-7px)}}
+.final-message{max-width:570px;font-size:17px;line-height:1.8;color:var(--muted)}
+.wish-box{margin:25px 0;padding:25px 38px;border-radius:25px;display:flex;flex-direction:column;gap:7px}
+.wish-box span{font-size:30px}.wish-box strong{font-family:"Playfair Display",serif;font-size:22px}.wish-box small{color:var(--muted)}
+.love-line{font-size:12px;color:#9d8d9e;margin:10px 0 20px}
+.replay{background:transparent;color:var(--rose-dark);border-bottom:1px solid rgba(189,79,125,.3);padding:4px 0}
+.toast{position:fixed;z-index:10;left:50%;bottom:24px;transform:translate(-50%,20px);background:#34283a;color:#fff;padding:12px 17px;border-radius:999px;font-size:12px;opacity:0;pointer-events:none;transition:.3s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.fun-grid{grid-template-columns:1fr;max-width:430px}.fun-card{padding:22px}.letter-card{padding:30px 24px}.letter-card h2{font-size:32px}.intro,.lead{font-size:15px}.screen{padding:55px 18px}h1{font-size:56px}h2{font-size:43px}}
